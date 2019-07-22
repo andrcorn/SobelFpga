@@ -1,0 +1,215 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : sobelXY.vf
+// /___/   /\     Timestamp : 06/02/2019 20:49:21
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family artix7 -verilog /home/andr/lnx/sobelXY.vf -w /home/andr/test/sobelXY.sch
+//Design Name: sobelXY
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale  100 ps / 10 ps
+
+module ADD4_HXILINX_sobelXY (CO, OFL, S0, S1, S2, S3, A0, A1, A2, A3, B0, B1, B2, B3 , CI);
+   
+   output      CO;
+   output      OFL;
+   output      S0;
+   output      S1;
+   output      S2;
+   output      S3;
+
+   input       A0;
+   input       A1;
+   input       A2;
+   input       A3;
+   input       B0;
+   input       B1;
+   input       B2;
+   input       B3;
+   input       CI;
+
+
+   assign   {CO, S3, S2, S1, S0} = {A3, A2, A1, A0} + {B3, B2, B1, B0} + CI;
+   assign   OFL = (A3 & B3 & (~S3)) | ((~A3) & (~B3) & S3); 
+   
+endmodule
+`timescale  100 ps / 10 ps
+
+module ADD8_HXILINX_sobelXY (CO, OFL, S, A, B, CI);
+
+
+   output 	      CO;
+   output 	      OFL;
+   output [7:0]       S;
+
+   input  [7:0]       A;
+   input  [7:0]       B;
+   input              CI;
+
+   assign   {CO, S} = A + B + CI;
+   assign   OFL     = ( A[7] & B[7] & (~S[7])) | ((~A[7]) & (~B[7]) & S[7]);
+
+endmodule
+`timescale  100 ps / 10 ps
+
+module INV8_HXILINX_sobelXY (O, I);
+    
+
+   output [7:0] O;
+
+   input  [7:0] I;
+
+assign O = ~I;
+endmodule
+`timescale 1ns / 1ps
+
+module shLf2_MUSER_sobelXY(shIN, 
+                           shOUT);
+
+    input [7:0] shIN;
+   output [7:0] shOUT;
+   
+   
+   BUF  XLXI_63 (.I(shIN[0]), 
+                .O(shOUT[1]));
+   BUF  XLXI_64 (.I(shIN[1]), 
+                .O(shOUT[2]));
+   BUF  XLXI_65 (.I(shIN[2]), 
+                .O(shOUT[3]));
+   BUF  XLXI_66 (.I(shIN[3]), 
+                .O(shOUT[4]));
+   BUF  XLXI_67 (.I(shIN[4]), 
+                .O(shOUT[5]));
+   BUF  XLXI_68 (.I(shIN[5]), 
+                .O(shOUT[6]));
+   BUF  XLXI_69 (.I(shIN[6]), 
+                .O(shOUT[7]));
+   GND  XLXI_71 (.G(shOUT[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module sobelXY(IN_0_0, 
+               IN_1_3, 
+               IN_2_6, 
+               IN_6_2, 
+               IN_7_5, 
+               IN_8_8, 
+               OVF, 
+               RES, 
+               SNG);
+
+    input [7:0] IN_0_0;
+    input [7:0] IN_1_3;
+    input [7:0] IN_2_6;
+    input [7:0] IN_6_2;
+    input [7:0] IN_7_5;
+    input [7:0] IN_8_8;
+   output OVF;
+   output [7:0] RES;
+   output SNG;
+   
+   wire [7:0] XLXN_6;
+   wire [7:0] XLXN_13;
+   wire [7:0] XLXN_15;
+   wire [7:0] XLXN_26;
+   wire XLXN_46;
+   wire XLXN_49;
+   wire [7:0] XLXN_87;
+   wire [7:0] XLXN_90;
+   wire XLXN_146;
+   wire XLXN_151;
+   wire XLXN_152;
+   wire [7:0] XLXN_182;
+   wire XLXN_189;
+   wire XLXN_190;
+   wire XLXN_191;
+   wire XLXN_194;
+   wire XLXN_195;
+   wire XLXN_198;
+   wire XLXN_206;
+   wire XLXN_211;
+   wire XLXN_212;
+   
+   shLf2_MUSER_sobelXY  IN0_0 (.shIN(IN_1_3[7:0]), 
+                              .shOUT(XLXN_90[7:0]));
+   (* HU_SET = "XLXI_11_37" *) 
+   ADD8_HXILINX_sobelXY  XLXI_11 (.A(IN_0_0[7:0]), 
+                                 .B(XLXN_90[7:0]), 
+                                 .CI(XLXN_151), 
+                                 .CO(XLXN_189), 
+                                 .OFL(), 
+                                 .S(XLXN_6[7:0]));
+   (* HU_SET = "XLXI_12_38" *) 
+   ADD8_HXILINX_sobelXY  XLXI_12 (.A(XLXN_6[7:0]), 
+                                 .B(IN_2_6[7:0]), 
+                                 .CI(XLXN_206), 
+                                 .CO(XLXN_190), 
+                                 .OFL(), 
+                                 .S(XLXN_182[7:0]));
+   (* HU_SET = "XLXI_13_36" *) 
+   ADD8_HXILINX_sobelXY  XLXI_13 (.A(IN_6_2[7:0]), 
+                                 .B(XLXN_87[7:0]), 
+                                 .CI(XLXN_152), 
+                                 .CO(XLXN_194), 
+                                 .OFL(), 
+                                 .S(XLXN_13[7:0]));
+   (* HU_SET = "XLXI_16_33" *) 
+   ADD8_HXILINX_sobelXY  XLXI_16 (.A(XLXN_13[7:0]), 
+                                 .B(IN_8_8[7:0]), 
+                                 .CI(XLXN_212), 
+                                 .CO(XLXN_198), 
+                                 .OFL(), 
+                                 .S(XLXN_15[7:0]));
+   (* HU_SET = "XLXI_17_34" *) 
+   INV8_HXILINX_sobelXY  XLXI_17 (.I(XLXN_15[7:0]), 
+                                 .O(XLXN_26[7:0]));
+   (* HU_SET = "XLXI_18_35" *) 
+   ADD8_HXILINX_sobelXY  XLXI_18 (.A(XLXN_182[7:0]), 
+                                 .B(XLXN_26[7:0]), 
+                                 .CI(XLXN_146), 
+                                 .CO(XLXN_46), 
+                                 .OFL(), 
+                                 .S(RES[7:0]));
+   VCC  XLXI_22 (.P(XLXN_146));
+   (* HU_SET = "XLXI_44_39" *) 
+   ADD4_HXILINX_sobelXY  XLXI_44 (.A0(XLXN_191), 
+                                 .A1(XLXN_211), 
+                                 .A2(XLXN_211), 
+                                 .A3(XLXN_211), 
+                                 .B0(XLXN_195), 
+                                 .B1(XLXN_49), 
+                                 .B2(XLXN_211), 
+                                 .B3(XLXN_211), 
+                                 .CI(XLXN_46), 
+                                 .CO(), 
+                                 .OFL(), 
+                                 .S0(OVF), 
+                                 .S1(SNG), 
+                                 .S2(), 
+                                 .S3());
+   VCC  XLXI_45 (.P(XLXN_49));
+   shLf2_MUSER_sobelXY  XLXI_72 (.shIN(IN_7_5[7:0]), 
+                                .shOUT(XLXN_87[7:0]));
+   GND  XLXI_120 (.G(XLXN_152));
+   GND  XLXI_121 (.G(XLXN_151));
+   OR2  XLXI_123 (.I0(XLXN_189), 
+                 .I1(XLXN_190), 
+                 .O(XLXN_191));
+   NOR2  XLXI_124 (.I0(XLXN_194), 
+                  .I1(XLXN_198), 
+                  .O(XLXN_195));
+   GND  XLXI_125 (.G(XLXN_206));
+   GND  XLXI_126 (.G(XLXN_212));
+   GND  XLXI_130 (.G(XLXN_211));
+endmodule

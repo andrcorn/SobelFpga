@@ -1,0 +1,157 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : sobelSumABS.vf
+// /___/   /\     Timestamp : 06/02/2019 20:49:19
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family artix7 -verilog /home/andr/lnx/sobelSumABS.vf -w /home/andr/test/sobelSumABS.sch
+//Design Name: sobelSumABS
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale  100 ps / 10 ps
+
+module ADD8_HXILINX_sobelSumABS (CO, OFL, S, A, B, CI);
+
+
+   output 	      CO;
+   output 	      OFL;
+   output [7:0]       S;
+
+   input  [7:0]       A;
+   input  [7:0]       B;
+   input              CI;
+
+   assign   {CO, S} = A + B + CI;
+   assign   OFL     = ( A[7] & B[7] & (~S[7])) | ((~A[7]) & (~B[7]) & S[7]);
+
+endmodule
+`timescale 1ns / 1ps
+
+module sobelSumABS(OVFX, 
+                   OVFY, 
+                   SGNY, 
+                   SNGX, 
+                   X, 
+                   Y, 
+                   Z);
+
+    input OVFX;
+    input OVFY;
+    input SGNY;
+    input SNGX;
+    input [7:0] X;
+    input [7:0] Y;
+   output [7:0] Z;
+   
+   wire [7:0] A;
+   wire [7:0] B;
+   wire OVF;
+   wire [7:0] S;
+   wire XLXN_174;
+   wire XLXN_180;
+   wire XLXN_184;
+   wire XLXN_258;
+   
+   XOR2  XLXI_48 (.I0(SGNY), 
+                 .I1(Y[2]), 
+                 .O(A[2]));
+   XOR2  XLXI_49 (.I0(SGNY), 
+                 .I1(Y[3]), 
+                 .O(A[3]));
+   XOR2  XLXI_76 (.I0(SGNY), 
+                 .I1(Y[1]), 
+                 .O(A[1]));
+   XOR2  XLXI_77 (.I0(SGNY), 
+                 .I1(Y[0]), 
+                 .O(A[0]));
+   XOR2  XLXI_78 (.I0(SGNY), 
+                 .I1(Y[7]), 
+                 .O(A[7]));
+   XOR2  XLXI_79 (.I0(SGNY), 
+                 .I1(Y[6]), 
+                 .O(A[6]));
+   XOR2  XLXI_80 (.I0(SGNY), 
+                 .I1(Y[5]), 
+                 .O(A[5]));
+   XOR2  XLXI_81 (.I0(SGNY), 
+                 .I1(Y[4]), 
+                 .O(A[4]));
+   XOR2  XLXI_122 (.I0(SGNY), 
+                  .I1(OVFY), 
+                  .O(OVF));
+   (* HU_SET = "XLXI_123_0" *) 
+   ADD8_HXILINX_sobelSumABS  XLXI_123 (.A(A[7:0]), 
+                                      .B(B[7:0]), 
+                                      .CI(XLXN_180), 
+                                      .CO(XLXN_184), 
+                                      .OFL(), 
+                                      .S(S[7:0]));
+   XOR2  XLXI_124 (.I0(SNGX), 
+                  .I1(X[3]), 
+                  .O(B[3]));
+   XOR2  XLXI_125 (.I0(SNGX), 
+                  .I1(X[2]), 
+                  .O(B[2]));
+   XOR2  XLXI_126 (.I0(SNGX), 
+                  .I1(X[1]), 
+                  .O(B[1]));
+   XOR2  XLXI_127 (.I0(SNGX), 
+                  .I1(X[0]), 
+                  .O(B[0]));
+   XOR2  XLXI_128 (.I0(SNGX), 
+                  .I1(X[6]), 
+                  .O(B[6]));
+   XOR2  XLXI_129 (.I0(SNGX), 
+                  .I1(X[5]), 
+                  .O(B[5]));
+   XOR2  XLXI_130 (.I0(SNGX), 
+                  .I1(X[4]), 
+                  .O(B[4]));
+   XOR2  XLXI_131 (.I0(SNGX), 
+                  .I1(X[7]), 
+                  .O(B[7]));
+   XOR2  XLXI_132 (.I0(SNGX), 
+                  .I1(OVFX), 
+                  .O(XLXN_174));
+   OR2  XLXI_133 (.I0(SNGX), 
+                 .I1(SGNY), 
+                 .O(XLXN_180));
+   OR3  XLXI_134 (.I0(XLXN_174), 
+                 .I1(OVF), 
+                 .I2(XLXN_184), 
+                 .O(XLXN_258));
+   OR2  XLXI_142 (.I0(XLXN_258), 
+                 .I1(S[0]), 
+                 .O(Z[0]));
+   OR2  XLXI_143 (.I0(XLXN_258), 
+                 .I1(S[1]), 
+                 .O(Z[1]));
+   OR2  XLXI_144 (.I0(XLXN_258), 
+                 .I1(S[2]), 
+                 .O(Z[2]));
+   OR2  XLXI_145 (.I0(XLXN_258), 
+                 .I1(S[3]), 
+                 .O(Z[3]));
+   OR2  XLXI_146 (.I0(XLXN_258), 
+                 .I1(S[4]), 
+                 .O(Z[4]));
+   OR2  XLXI_147 (.I0(XLXN_258), 
+                 .I1(S[5]), 
+                 .O(Z[5]));
+   OR2  XLXI_148 (.I0(XLXN_258), 
+                 .I1(S[6]), 
+                 .O(Z[6]));
+   OR2  XLXI_149 (.I0(XLXN_258), 
+                 .I1(S[7]), 
+                 .O(Z[7]));
+endmodule

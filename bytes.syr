@@ -1,0 +1,1278 @@
+Release 14.7 - xst P.20131013 (lin)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> 
+Reading design: bytes.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "bytes.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "bytes"
+Output Format                      : NGC
+Target Device                      : xc3s50-5-pq208
+
+---- Source Options
+Top Module Name                    : bytes
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "shLf2.vf" in library work
+Compiling verilog file "sobelXY.vf" in library work
+Module <shLf2> compiled
+Module <ADD4_HXILINX_sobelXY> compiled
+Module <ADD8_HXILINX_sobelXY> compiled
+Module <INV8_HXILINX_sobelXY> compiled
+Module <shLf2_MUSER_sobelXY> compiled
+Compiling verilog file "sobelSumABS.vf" in library work
+Module <sobelXY> compiled
+Module <ADD8_HXILINX_sobelSumABS> compiled
+Compiling verilog file "mux1_3.vf" in library work
+Module <sobelSumABS> compiled
+Compiling verilog file "sobel.vf" in library work
+Module <mux1_3> compiled
+Module <ADD4_HXILINX_sobel> compiled
+Module <ADD8_HXILINX_sobel> compiled
+Module <INV8_HXILINX_sobel> compiled
+Module <sobelSumABS_MUSER_sobel> compiled
+Module <shLf2_MUSER_sobel> compiled
+Module <sobelXY_MUSER_sobel> compiled
+Compiling verilog file "muxs8_3.vf" in library work
+Module <sobel> compiled
+Module <mux1_3_MUSER_muxs8_3> compiled
+Compiling verilog file "bytes.vf" in library work
+Module <muxs8_3> compiled
+Module <FTCE_MXILINX_bytes> compiled
+Module <CB4CE_MXILINX_bytes> compiled
+Module <mux1_3_MUSER_bytes> compiled
+Module <muxs8_3_MUSER_bytes> compiled
+Module <FD8CE_MXILINX_bytes> compiled
+Module <ADD8_MXILINX_bytes> compiled
+Module <sobelSumABS_MUSER_bytes> compiled
+Module <ADD4_MXILINX_bytes> compiled
+Module <shLf2_MUSER_bytes> compiled
+Module <INV8_MXILINX_bytes> compiled
+Module <sobelXY_MUSER_bytes> compiled
+Module <sobel_MUSER_bytes> compiled
+Module <D3_8E_MXILINX_bytes> compiled
+Module <INV4_MXILINX_bytes> compiled
+Module <D2_4E_MXILINX_bytes> compiled
+Module <CB2CE_MXILINX_bytes> compiled
+Module <bytes> compiled
+No errors in compilation
+Analysis of file <"bytes.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <bytes> in library <work>.
+
+Analyzing hierarchy for module <D3_8E_MXILINX_bytes> in library <work>.
+
+Analyzing hierarchy for module <FD8CE_MXILINX_bytes> in library <work>.
+
+Analyzing hierarchy for module <FD8CE_MXILINX_bytes> in library <work>.
+
+Analyzing hierarchy for module <FD8CE_MXILINX_bytes> in library <work>.
+
+Analyzing hierarchy for module <FD8CE_MXILINX_bytes> in library <work>.
+
+Analyzing hierarchy for module <FD8CE_MXILINX_bytes> in library <work>.
+
+Analyzing hierarchy for module <FD8CE_MXILINX_bytes> in library <work>.
+
+Analyzing hierarchy for module <FD8CE_MXILINX_bytes> in library <work>.
+
+Analyzing hierarchy for module <FD8CE_MXILINX_bytes> in library <work>.
+
+Analyzing hierarchy for module <FD8CE_MXILINX_bytes> in library <work>.
+
+Analyzing hierarchy for module <D2_4E_MXILINX_bytes> in library <work>.
+
+Analyzing hierarchy for module <CB2CE_MXILINX_bytes> in library <work>.
+
+Analyzing hierarchy for module <INV4_MXILINX_bytes> in library <work>.
+
+Analyzing hierarchy for module <CB4CE_MXILINX_bytes> in library <work>.
+
+Analyzing hierarchy for module <sobel_MUSER_bytes> in library <work>.
+
+Analyzing hierarchy for module <FD8CE_MXILINX_bytes> in library <work>.
+
+Analyzing hierarchy for module <CB4CE_MXILINX_bytes> in library <work>.
+
+Analyzing hierarchy for module <muxs8_3_MUSER_bytes> in library <work>.
+
+Analyzing hierarchy for module <FTCE_MXILINX_bytes> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_bytes> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_bytes> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_bytes> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_bytes> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_bytes> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <sobelXY_MUSER_bytes> in library <work>.
+
+Analyzing hierarchy for module <sobelSumABS_MUSER_bytes> in library <work>.
+
+Analyzing hierarchy for module <mux1_3_MUSER_bytes> in library <work>.
+
+Analyzing hierarchy for module <shLf2_MUSER_bytes> in library <work>.
+
+Analyzing hierarchy for module <ADD8_MXILINX_bytes> in library <work>.
+
+Analyzing hierarchy for module <ADD8_MXILINX_bytes> in library <work>.
+
+Analyzing hierarchy for module <ADD8_MXILINX_bytes> in library <work>.
+
+Analyzing hierarchy for module <ADD8_MXILINX_bytes> in library <work>.
+
+Analyzing hierarchy for module <INV8_MXILINX_bytes> in library <work>.
+
+Analyzing hierarchy for module <ADD8_MXILINX_bytes> in library <work>.
+
+Analyzing hierarchy for module <ADD4_MXILINX_bytes> in library <work>.
+
+Analyzing hierarchy for module <ADD8_MXILINX_bytes> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <bytes>.
+Module <bytes> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <XLXI_426> in unit <bytes>.
+    Set user-defined property "INIT =  1" for instance <XLXI_573> in unit <bytes>.
+    Set user-defined property "INIT =  0" for instance <XLXI_696> in unit <bytes>.
+    Set user-defined property "INIT =  0" for instance <XLXI_742> in unit <bytes>.
+    Set user-defined property "HU_SET =  XLXI_10_20" for instance <XLXI_10> in unit <bytes>.
+    Set user-defined property "HU_SET =  XLXI_121_19" for instance <XLXI_121> in unit <bytes>.
+    Set user-defined property "HU_SET =  XLXI_144_26" for instance <XLXI_144> in unit <bytes>.
+    Set user-defined property "HU_SET =  XLXI_148_18" for instance <XLXI_148> in unit <bytes>.
+    Set user-defined property "HU_SET =  XLXI_168_17" for instance <XLXI_168> in unit <bytes>.
+    Set user-defined property "HU_SET =  XLXI_172_16" for instance <XLXI_172> in unit <bytes>.
+    Set user-defined property "HU_SET =  XLXI_176_15" for instance <XLXI_176> in unit <bytes>.
+    Set user-defined property "HU_SET =  XLXI_180_14" for instance <XLXI_180> in unit <bytes>.
+    Set user-defined property "HU_SET =  XLXI_285_21" for instance <XLXI_285> in unit <bytes>.
+    Set user-defined property "HU_SET =  XLXI_527_23" for instance <XLXI_527> in unit <bytes>.
+    Set user-defined property "HU_SET =  XLXI_540_22" for instance <XLXI_540> in unit <bytes>.
+    Set user-defined property "HU_SET =  XLXI_541_25" for instance <XLXI_541> in unit <bytes>.
+    Set user-defined property "HU_SET =  XLXI_543_24" for instance <XLXI_543> in unit <bytes>.
+    Set user-defined property "HU_SET =  XLXI_741_28" for instance <XLXI_741> in unit <bytes>.
+    Set user-defined property "HU_SET =  XLXI_761_29" for instance <XLXI_761> in unit <bytes>.
+    Set user-defined property "HU_SET =  XLXI_8_27" for instance <XLXI_8> in unit <bytes>.
+Analyzing module <D3_8E_MXILINX_bytes> in library <work>.
+Module <D3_8E_MXILINX_bytes> is correct for synthesis.
+ 
+Analyzing module <FD8CE_MXILINX_bytes.1> in library <work>.
+Module <FD8CE_MXILINX_bytes.1> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_Q0> in unit <FD8CE_MXILINX_bytes.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q1> in unit <FD8CE_MXILINX_bytes.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q2> in unit <FD8CE_MXILINX_bytes.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q3> in unit <FD8CE_MXILINX_bytes.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q4> in unit <FD8CE_MXILINX_bytes.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q5> in unit <FD8CE_MXILINX_bytes.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q6> in unit <FD8CE_MXILINX_bytes.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q7> in unit <FD8CE_MXILINX_bytes.1>.
+Analyzing module <FD8CE_MXILINX_bytes.2> in library <work>.
+Module <FD8CE_MXILINX_bytes.2> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_Q0> in unit <FD8CE_MXILINX_bytes.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q1> in unit <FD8CE_MXILINX_bytes.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q2> in unit <FD8CE_MXILINX_bytes.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q3> in unit <FD8CE_MXILINX_bytes.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q4> in unit <FD8CE_MXILINX_bytes.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q5> in unit <FD8CE_MXILINX_bytes.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q6> in unit <FD8CE_MXILINX_bytes.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q7> in unit <FD8CE_MXILINX_bytes.2>.
+Analyzing module <FD8CE_MXILINX_bytes.3> in library <work>.
+Module <FD8CE_MXILINX_bytes.3> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_Q0> in unit <FD8CE_MXILINX_bytes.3>.
+    Set user-defined property "INIT =  0" for instance <I_Q1> in unit <FD8CE_MXILINX_bytes.3>.
+    Set user-defined property "INIT =  0" for instance <I_Q2> in unit <FD8CE_MXILINX_bytes.3>.
+    Set user-defined property "INIT =  0" for instance <I_Q3> in unit <FD8CE_MXILINX_bytes.3>.
+    Set user-defined property "INIT =  0" for instance <I_Q4> in unit <FD8CE_MXILINX_bytes.3>.
+    Set user-defined property "INIT =  0" for instance <I_Q5> in unit <FD8CE_MXILINX_bytes.3>.
+    Set user-defined property "INIT =  0" for instance <I_Q6> in unit <FD8CE_MXILINX_bytes.3>.
+    Set user-defined property "INIT =  0" for instance <I_Q7> in unit <FD8CE_MXILINX_bytes.3>.
+Analyzing module <FD8CE_MXILINX_bytes.4> in library <work>.
+Module <FD8CE_MXILINX_bytes.4> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_Q0> in unit <FD8CE_MXILINX_bytes.4>.
+    Set user-defined property "INIT =  0" for instance <I_Q1> in unit <FD8CE_MXILINX_bytes.4>.
+    Set user-defined property "INIT =  0" for instance <I_Q2> in unit <FD8CE_MXILINX_bytes.4>.
+    Set user-defined property "INIT =  0" for instance <I_Q3> in unit <FD8CE_MXILINX_bytes.4>.
+    Set user-defined property "INIT =  0" for instance <I_Q4> in unit <FD8CE_MXILINX_bytes.4>.
+    Set user-defined property "INIT =  0" for instance <I_Q5> in unit <FD8CE_MXILINX_bytes.4>.
+    Set user-defined property "INIT =  0" for instance <I_Q6> in unit <FD8CE_MXILINX_bytes.4>.
+    Set user-defined property "INIT =  0" for instance <I_Q7> in unit <FD8CE_MXILINX_bytes.4>.
+Analyzing module <FD8CE_MXILINX_bytes.5> in library <work>.
+Module <FD8CE_MXILINX_bytes.5> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_Q0> in unit <FD8CE_MXILINX_bytes.5>.
+    Set user-defined property "INIT =  0" for instance <I_Q1> in unit <FD8CE_MXILINX_bytes.5>.
+    Set user-defined property "INIT =  0" for instance <I_Q2> in unit <FD8CE_MXILINX_bytes.5>.
+    Set user-defined property "INIT =  0" for instance <I_Q3> in unit <FD8CE_MXILINX_bytes.5>.
+    Set user-defined property "INIT =  0" for instance <I_Q4> in unit <FD8CE_MXILINX_bytes.5>.
+    Set user-defined property "INIT =  0" for instance <I_Q5> in unit <FD8CE_MXILINX_bytes.5>.
+    Set user-defined property "INIT =  0" for instance <I_Q6> in unit <FD8CE_MXILINX_bytes.5>.
+    Set user-defined property "INIT =  0" for instance <I_Q7> in unit <FD8CE_MXILINX_bytes.5>.
+Analyzing module <FD8CE_MXILINX_bytes.6> in library <work>.
+Module <FD8CE_MXILINX_bytes.6> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_Q0> in unit <FD8CE_MXILINX_bytes.6>.
+    Set user-defined property "INIT =  0" for instance <I_Q1> in unit <FD8CE_MXILINX_bytes.6>.
+    Set user-defined property "INIT =  0" for instance <I_Q2> in unit <FD8CE_MXILINX_bytes.6>.
+    Set user-defined property "INIT =  0" for instance <I_Q3> in unit <FD8CE_MXILINX_bytes.6>.
+    Set user-defined property "INIT =  0" for instance <I_Q4> in unit <FD8CE_MXILINX_bytes.6>.
+    Set user-defined property "INIT =  0" for instance <I_Q5> in unit <FD8CE_MXILINX_bytes.6>.
+    Set user-defined property "INIT =  0" for instance <I_Q6> in unit <FD8CE_MXILINX_bytes.6>.
+    Set user-defined property "INIT =  0" for instance <I_Q7> in unit <FD8CE_MXILINX_bytes.6>.
+Analyzing module <FD8CE_MXILINX_bytes.7> in library <work>.
+Module <FD8CE_MXILINX_bytes.7> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_Q0> in unit <FD8CE_MXILINX_bytes.7>.
+    Set user-defined property "INIT =  0" for instance <I_Q1> in unit <FD8CE_MXILINX_bytes.7>.
+    Set user-defined property "INIT =  0" for instance <I_Q2> in unit <FD8CE_MXILINX_bytes.7>.
+    Set user-defined property "INIT =  0" for instance <I_Q3> in unit <FD8CE_MXILINX_bytes.7>.
+    Set user-defined property "INIT =  0" for instance <I_Q4> in unit <FD8CE_MXILINX_bytes.7>.
+    Set user-defined property "INIT =  0" for instance <I_Q5> in unit <FD8CE_MXILINX_bytes.7>.
+    Set user-defined property "INIT =  0" for instance <I_Q6> in unit <FD8CE_MXILINX_bytes.7>.
+    Set user-defined property "INIT =  0" for instance <I_Q7> in unit <FD8CE_MXILINX_bytes.7>.
+Analyzing module <FD8CE_MXILINX_bytes.8> in library <work>.
+Module <FD8CE_MXILINX_bytes.8> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_Q0> in unit <FD8CE_MXILINX_bytes.8>.
+    Set user-defined property "INIT =  0" for instance <I_Q1> in unit <FD8CE_MXILINX_bytes.8>.
+    Set user-defined property "INIT =  0" for instance <I_Q2> in unit <FD8CE_MXILINX_bytes.8>.
+    Set user-defined property "INIT =  0" for instance <I_Q3> in unit <FD8CE_MXILINX_bytes.8>.
+    Set user-defined property "INIT =  0" for instance <I_Q4> in unit <FD8CE_MXILINX_bytes.8>.
+    Set user-defined property "INIT =  0" for instance <I_Q5> in unit <FD8CE_MXILINX_bytes.8>.
+    Set user-defined property "INIT =  0" for instance <I_Q6> in unit <FD8CE_MXILINX_bytes.8>.
+    Set user-defined property "INIT =  0" for instance <I_Q7> in unit <FD8CE_MXILINX_bytes.8>.
+Analyzing module <FD8CE_MXILINX_bytes.9> in library <work>.
+Module <FD8CE_MXILINX_bytes.9> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_Q0> in unit <FD8CE_MXILINX_bytes.9>.
+    Set user-defined property "INIT =  0" for instance <I_Q1> in unit <FD8CE_MXILINX_bytes.9>.
+    Set user-defined property "INIT =  0" for instance <I_Q2> in unit <FD8CE_MXILINX_bytes.9>.
+    Set user-defined property "INIT =  0" for instance <I_Q3> in unit <FD8CE_MXILINX_bytes.9>.
+    Set user-defined property "INIT =  0" for instance <I_Q4> in unit <FD8CE_MXILINX_bytes.9>.
+    Set user-defined property "INIT =  0" for instance <I_Q5> in unit <FD8CE_MXILINX_bytes.9>.
+    Set user-defined property "INIT =  0" for instance <I_Q6> in unit <FD8CE_MXILINX_bytes.9>.
+    Set user-defined property "INIT =  0" for instance <I_Q7> in unit <FD8CE_MXILINX_bytes.9>.
+Analyzing module <D2_4E_MXILINX_bytes> in library <work>.
+Module <D2_4E_MXILINX_bytes> is correct for synthesis.
+ 
+Analyzing module <CB2CE_MXILINX_bytes> in library <work>.
+Module <CB2CE_MXILINX_bytes> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_Q0_12" for instance <I_Q0> in unit <CB2CE_MXILINX_bytes>.
+    Set user-defined property "HU_SET =  I_Q1_13" for instance <I_Q1> in unit <CB2CE_MXILINX_bytes>.
+Analyzing module <FTCE_MXILINX_bytes.1> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_bytes.1> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_bytes.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_bytes.1>.
+Analyzing module <FTCE_MXILINX_bytes.2> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_bytes.2> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_bytes.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_bytes.2>.
+Analyzing module <INV4_MXILINX_bytes> in library <work>.
+Module <INV4_MXILINX_bytes> is correct for synthesis.
+ 
+Analyzing module <CB4CE_MXILINX_bytes.1> in library <work>.
+Module <CB4CE_MXILINX_bytes.1> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_Q0_0" for instance <I_Q0> in unit <CB4CE_MXILINX_bytes.1>.
+    Set user-defined property "HU_SET =  I_Q1_1" for instance <I_Q1> in unit <CB4CE_MXILINX_bytes.1>.
+    Set user-defined property "HU_SET =  I_Q2_2" for instance <I_Q2> in unit <CB4CE_MXILINX_bytes.1>.
+    Set user-defined property "HU_SET =  I_Q3_3" for instance <I_Q3> in unit <CB4CE_MXILINX_bytes.1>.
+Analyzing module <FTCE_MXILINX_bytes.3> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_bytes.3> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_bytes.3>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_bytes.3>.
+Analyzing module <FTCE_MXILINX_bytes.4> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_bytes.4> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_bytes.4>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_bytes.4>.
+Analyzing module <FTCE_MXILINX_bytes.5> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_bytes.5> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_bytes.5>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_bytes.5>.
+Analyzing module <FTCE_MXILINX_bytes.6> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_bytes.6> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_bytes.6>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_bytes.6>.
+Analyzing module <sobel_MUSER_bytes> in library <work>.
+Module <sobel_MUSER_bytes> is correct for synthesis.
+ 
+Analyzing module <sobelXY_MUSER_bytes> in library <work>.
+Module <sobelXY_MUSER_bytes> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_11_9" for instance <XLXI_11> in unit <sobelXY_MUSER_bytes>.
+    Set user-defined property "HU_SET =  XLXI_12_10" for instance <XLXI_12> in unit <sobelXY_MUSER_bytes>.
+    Set user-defined property "HU_SET =  XLXI_13_8" for instance <XLXI_13> in unit <sobelXY_MUSER_bytes>.
+    Set user-defined property "HU_SET =  XLXI_16_5" for instance <XLXI_16> in unit <sobelXY_MUSER_bytes>.
+    Set user-defined property "HU_SET =  XLXI_17_6" for instance <XLXI_17> in unit <sobelXY_MUSER_bytes>.
+    Set user-defined property "HU_SET =  XLXI_18_7" for instance <XLXI_18> in unit <sobelXY_MUSER_bytes>.
+    Set user-defined property "HU_SET =  XLXI_44_11" for instance <XLXI_44> in unit <sobelXY_MUSER_bytes>.
+Analyzing module <shLf2_MUSER_bytes> in library <work>.
+Module <shLf2_MUSER_bytes> is correct for synthesis.
+ 
+Analyzing module <ADD8_MXILINX_bytes.1> in library <work>.
+Module <ADD8_MXILINX_bytes.1> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_16> in unit <ADD8_MXILINX_bytes.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_17> in unit <ADD8_MXILINX_bytes.1>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_18> in unit <ADD8_MXILINX_bytes.1>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_19> in unit <ADD8_MXILINX_bytes.1>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_20> in unit <ADD8_MXILINX_bytes.1>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_21> in unit <ADD8_MXILINX_bytes.1>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_22> in unit <ADD8_MXILINX_bytes.1>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_23> in unit <ADD8_MXILINX_bytes.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_55> in unit <ADD8_MXILINX_bytes.1>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_58> in unit <ADD8_MXILINX_bytes.1>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_62> in unit <ADD8_MXILINX_bytes.1>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_63> in unit <ADD8_MXILINX_bytes.1>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_64> in unit <ADD8_MXILINX_bytes.1>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_107> in unit <ADD8_MXILINX_bytes.1>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_110> in unit <ADD8_MXILINX_bytes.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_111> in unit <ADD8_MXILINX_bytes.1>.
+Analyzing module <ADD8_MXILINX_bytes.2> in library <work>.
+Module <ADD8_MXILINX_bytes.2> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_16> in unit <ADD8_MXILINX_bytes.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_17> in unit <ADD8_MXILINX_bytes.2>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_18> in unit <ADD8_MXILINX_bytes.2>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_19> in unit <ADD8_MXILINX_bytes.2>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_20> in unit <ADD8_MXILINX_bytes.2>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_21> in unit <ADD8_MXILINX_bytes.2>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_22> in unit <ADD8_MXILINX_bytes.2>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_23> in unit <ADD8_MXILINX_bytes.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_55> in unit <ADD8_MXILINX_bytes.2>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_58> in unit <ADD8_MXILINX_bytes.2>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_62> in unit <ADD8_MXILINX_bytes.2>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_63> in unit <ADD8_MXILINX_bytes.2>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_64> in unit <ADD8_MXILINX_bytes.2>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_107> in unit <ADD8_MXILINX_bytes.2>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_110> in unit <ADD8_MXILINX_bytes.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_111> in unit <ADD8_MXILINX_bytes.2>.
+Analyzing module <ADD8_MXILINX_bytes.3> in library <work>.
+Module <ADD8_MXILINX_bytes.3> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_16> in unit <ADD8_MXILINX_bytes.3>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_17> in unit <ADD8_MXILINX_bytes.3>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_18> in unit <ADD8_MXILINX_bytes.3>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_19> in unit <ADD8_MXILINX_bytes.3>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_20> in unit <ADD8_MXILINX_bytes.3>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_21> in unit <ADD8_MXILINX_bytes.3>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_22> in unit <ADD8_MXILINX_bytes.3>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_23> in unit <ADD8_MXILINX_bytes.3>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_55> in unit <ADD8_MXILINX_bytes.3>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_58> in unit <ADD8_MXILINX_bytes.3>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_62> in unit <ADD8_MXILINX_bytes.3>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_63> in unit <ADD8_MXILINX_bytes.3>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_64> in unit <ADD8_MXILINX_bytes.3>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_107> in unit <ADD8_MXILINX_bytes.3>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_110> in unit <ADD8_MXILINX_bytes.3>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_111> in unit <ADD8_MXILINX_bytes.3>.
+Analyzing module <ADD8_MXILINX_bytes.4> in library <work>.
+Module <ADD8_MXILINX_bytes.4> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_16> in unit <ADD8_MXILINX_bytes.4>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_17> in unit <ADD8_MXILINX_bytes.4>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_18> in unit <ADD8_MXILINX_bytes.4>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_19> in unit <ADD8_MXILINX_bytes.4>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_20> in unit <ADD8_MXILINX_bytes.4>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_21> in unit <ADD8_MXILINX_bytes.4>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_22> in unit <ADD8_MXILINX_bytes.4>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_23> in unit <ADD8_MXILINX_bytes.4>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_55> in unit <ADD8_MXILINX_bytes.4>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_58> in unit <ADD8_MXILINX_bytes.4>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_62> in unit <ADD8_MXILINX_bytes.4>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_63> in unit <ADD8_MXILINX_bytes.4>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_64> in unit <ADD8_MXILINX_bytes.4>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_107> in unit <ADD8_MXILINX_bytes.4>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_110> in unit <ADD8_MXILINX_bytes.4>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_111> in unit <ADD8_MXILINX_bytes.4>.
+Analyzing module <INV8_MXILINX_bytes> in library <work>.
+Module <INV8_MXILINX_bytes> is correct for synthesis.
+ 
+Analyzing module <ADD8_MXILINX_bytes.5> in library <work>.
+Module <ADD8_MXILINX_bytes.5> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_16> in unit <ADD8_MXILINX_bytes.5>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_17> in unit <ADD8_MXILINX_bytes.5>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_18> in unit <ADD8_MXILINX_bytes.5>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_19> in unit <ADD8_MXILINX_bytes.5>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_20> in unit <ADD8_MXILINX_bytes.5>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_21> in unit <ADD8_MXILINX_bytes.5>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_22> in unit <ADD8_MXILINX_bytes.5>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_23> in unit <ADD8_MXILINX_bytes.5>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_55> in unit <ADD8_MXILINX_bytes.5>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_58> in unit <ADD8_MXILINX_bytes.5>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_62> in unit <ADD8_MXILINX_bytes.5>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_63> in unit <ADD8_MXILINX_bytes.5>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_64> in unit <ADD8_MXILINX_bytes.5>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_107> in unit <ADD8_MXILINX_bytes.5>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_110> in unit <ADD8_MXILINX_bytes.5>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_111> in unit <ADD8_MXILINX_bytes.5>.
+Analyzing module <ADD4_MXILINX_bytes> in library <work>.
+Module <ADD4_MXILINX_bytes> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_55> in unit <ADD4_MXILINX_bytes>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_58> in unit <ADD4_MXILINX_bytes>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_62> in unit <ADD4_MXILINX_bytes>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_111> in unit <ADD4_MXILINX_bytes>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_175> in unit <ADD4_MXILINX_bytes>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_178> in unit <ADD4_MXILINX_bytes>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_182> in unit <ADD4_MXILINX_bytes>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_206> in unit <ADD4_MXILINX_bytes>.
+Analyzing module <sobelSumABS_MUSER_bytes> in library <work>.
+Module <sobelSumABS_MUSER_bytes> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_123_4" for instance <XLXI_123> in unit <sobelSumABS_MUSER_bytes>.
+Analyzing module <ADD8_MXILINX_bytes.6> in library <work>.
+Module <ADD8_MXILINX_bytes.6> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_16> in unit <ADD8_MXILINX_bytes.6>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_17> in unit <ADD8_MXILINX_bytes.6>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_18> in unit <ADD8_MXILINX_bytes.6>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_19> in unit <ADD8_MXILINX_bytes.6>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_20> in unit <ADD8_MXILINX_bytes.6>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_21> in unit <ADD8_MXILINX_bytes.6>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_22> in unit <ADD8_MXILINX_bytes.6>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_23> in unit <ADD8_MXILINX_bytes.6>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_55> in unit <ADD8_MXILINX_bytes.6>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_58> in unit <ADD8_MXILINX_bytes.6>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_62> in unit <ADD8_MXILINX_bytes.6>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_63> in unit <ADD8_MXILINX_bytes.6>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_64> in unit <ADD8_MXILINX_bytes.6>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_107> in unit <ADD8_MXILINX_bytes.6>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_110> in unit <ADD8_MXILINX_bytes.6>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_111> in unit <ADD8_MXILINX_bytes.6>.
+Analyzing module <FD8CE_MXILINX_bytes.10> in library <work>.
+Module <FD8CE_MXILINX_bytes.10> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_Q0> in unit <FD8CE_MXILINX_bytes.10>.
+    Set user-defined property "INIT =  0" for instance <I_Q1> in unit <FD8CE_MXILINX_bytes.10>.
+    Set user-defined property "INIT =  0" for instance <I_Q2> in unit <FD8CE_MXILINX_bytes.10>.
+    Set user-defined property "INIT =  0" for instance <I_Q3> in unit <FD8CE_MXILINX_bytes.10>.
+    Set user-defined property "INIT =  0" for instance <I_Q4> in unit <FD8CE_MXILINX_bytes.10>.
+    Set user-defined property "INIT =  0" for instance <I_Q5> in unit <FD8CE_MXILINX_bytes.10>.
+    Set user-defined property "INIT =  0" for instance <I_Q6> in unit <FD8CE_MXILINX_bytes.10>.
+    Set user-defined property "INIT =  0" for instance <I_Q7> in unit <FD8CE_MXILINX_bytes.10>.
+Analyzing module <CB4CE_MXILINX_bytes.2> in library <work>.
+Module <CB4CE_MXILINX_bytes.2> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_Q0_0" for instance <I_Q0> in unit <CB4CE_MXILINX_bytes.2>.
+    Set user-defined property "HU_SET =  I_Q1_1" for instance <I_Q1> in unit <CB4CE_MXILINX_bytes.2>.
+    Set user-defined property "HU_SET =  I_Q2_2" for instance <I_Q2> in unit <CB4CE_MXILINX_bytes.2>.
+    Set user-defined property "HU_SET =  I_Q3_3" for instance <I_Q3> in unit <CB4CE_MXILINX_bytes.2>.
+Analyzing module <muxs8_3_MUSER_bytes> in library <work>.
+Module <muxs8_3_MUSER_bytes> is correct for synthesis.
+ 
+Analyzing module <mux1_3_MUSER_bytes> in library <work>.
+Module <mux1_3_MUSER_bytes> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <D3_8E_MXILINX_bytes>.
+    Related source file is "bytes.vf".
+Unit <D3_8E_MXILINX_bytes> synthesized.
+
+
+Synthesizing Unit <FD8CE_MXILINX_bytes_1>.
+    Related source file is "bytes.vf".
+Unit <FD8CE_MXILINX_bytes_1> synthesized.
+
+
+Synthesizing Unit <FD8CE_MXILINX_bytes_2>.
+    Related source file is "bytes.vf".
+Unit <FD8CE_MXILINX_bytes_2> synthesized.
+
+
+Synthesizing Unit <FD8CE_MXILINX_bytes_3>.
+    Related source file is "bytes.vf".
+Unit <FD8CE_MXILINX_bytes_3> synthesized.
+
+
+Synthesizing Unit <FD8CE_MXILINX_bytes_4>.
+    Related source file is "bytes.vf".
+Unit <FD8CE_MXILINX_bytes_4> synthesized.
+
+
+Synthesizing Unit <FD8CE_MXILINX_bytes_5>.
+    Related source file is "bytes.vf".
+Unit <FD8CE_MXILINX_bytes_5> synthesized.
+
+
+Synthesizing Unit <FD8CE_MXILINX_bytes_6>.
+    Related source file is "bytes.vf".
+Unit <FD8CE_MXILINX_bytes_6> synthesized.
+
+
+Synthesizing Unit <FD8CE_MXILINX_bytes_7>.
+    Related source file is "bytes.vf".
+Unit <FD8CE_MXILINX_bytes_7> synthesized.
+
+
+Synthesizing Unit <FD8CE_MXILINX_bytes_8>.
+    Related source file is "bytes.vf".
+Unit <FD8CE_MXILINX_bytes_8> synthesized.
+
+
+Synthesizing Unit <FD8CE_MXILINX_bytes_9>.
+    Related source file is "bytes.vf".
+Unit <FD8CE_MXILINX_bytes_9> synthesized.
+
+
+Synthesizing Unit <D2_4E_MXILINX_bytes>.
+    Related source file is "bytes.vf".
+Unit <D2_4E_MXILINX_bytes> synthesized.
+
+
+Synthesizing Unit <INV4_MXILINX_bytes>.
+    Related source file is "bytes.vf".
+Unit <INV4_MXILINX_bytes> synthesized.
+
+
+Synthesizing Unit <FD8CE_MXILINX_bytes_10>.
+    Related source file is "bytes.vf".
+Unit <FD8CE_MXILINX_bytes_10> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_bytes_1>.
+    Related source file is "bytes.vf".
+Unit <FTCE_MXILINX_bytes_1> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_bytes_2>.
+    Related source file is "bytes.vf".
+Unit <FTCE_MXILINX_bytes_2> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_bytes_3>.
+    Related source file is "bytes.vf".
+Unit <FTCE_MXILINX_bytes_3> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_bytes_4>.
+    Related source file is "bytes.vf".
+Unit <FTCE_MXILINX_bytes_4> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_bytes_5>.
+    Related source file is "bytes.vf".
+Unit <FTCE_MXILINX_bytes_5> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_bytes_6>.
+    Related source file is "bytes.vf".
+Unit <FTCE_MXILINX_bytes_6> synthesized.
+
+
+Synthesizing Unit <shLf2_MUSER_bytes>.
+    Related source file is "bytes.vf".
+WARNING:Xst:647 - Input <shIN<7>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <shLf2_MUSER_bytes> synthesized.
+
+
+Synthesizing Unit <ADD8_MXILINX_bytes_1>.
+    Related source file is "bytes.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <ADD8_MXILINX_bytes_1> synthesized.
+
+
+Synthesizing Unit <ADD8_MXILINX_bytes_2>.
+    Related source file is "bytes.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <ADD8_MXILINX_bytes_2> synthesized.
+
+
+Synthesizing Unit <ADD8_MXILINX_bytes_3>.
+    Related source file is "bytes.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <ADD8_MXILINX_bytes_3> synthesized.
+
+
+Synthesizing Unit <ADD8_MXILINX_bytes_4>.
+    Related source file is "bytes.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <ADD8_MXILINX_bytes_4> synthesized.
+
+
+Synthesizing Unit <INV8_MXILINX_bytes>.
+    Related source file is "bytes.vf".
+Unit <INV8_MXILINX_bytes> synthesized.
+
+
+Synthesizing Unit <ADD8_MXILINX_bytes_5>.
+    Related source file is "bytes.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <ADD8_MXILINX_bytes_5> synthesized.
+
+
+Synthesizing Unit <ADD4_MXILINX_bytes>.
+    Related source file is "bytes.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <ADD4_MXILINX_bytes> synthesized.
+
+
+Synthesizing Unit <ADD8_MXILINX_bytes_6>.
+    Related source file is "bytes.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <ADD8_MXILINX_bytes_6> synthesized.
+
+
+Synthesizing Unit <mux1_3_MUSER_bytes>.
+    Related source file is "bytes.vf".
+Unit <mux1_3_MUSER_bytes> synthesized.
+
+
+Synthesizing Unit <CB2CE_MXILINX_bytes>.
+    Related source file is "bytes.vf".
+Unit <CB2CE_MXILINX_bytes> synthesized.
+
+
+Synthesizing Unit <CB4CE_MXILINX_bytes_1>.
+    Related source file is "bytes.vf".
+Unit <CB4CE_MXILINX_bytes_1> synthesized.
+
+
+Synthesizing Unit <CB4CE_MXILINX_bytes_2>.
+    Related source file is "bytes.vf".
+Unit <CB4CE_MXILINX_bytes_2> synthesized.
+
+
+Synthesizing Unit <muxs8_3_MUSER_bytes>.
+    Related source file is "bytes.vf".
+Unit <muxs8_3_MUSER_bytes> synthesized.
+
+
+Synthesizing Unit <sobelXY_MUSER_bytes>.
+    Related source file is "bytes.vf".
+Unit <sobelXY_MUSER_bytes> synthesized.
+
+
+Synthesizing Unit <sobelSumABS_MUSER_bytes>.
+    Related source file is "bytes.vf".
+Unit <sobelSumABS_MUSER_bytes> synthesized.
+
+
+Synthesizing Unit <sobel_MUSER_bytes>.
+    Related source file is "bytes.vf".
+WARNING:Xst:647 - Input <IN4> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <sobel_MUSER_bytes> synthesized.
+
+
+Synthesizing Unit <bytes>.
+    Related source file is "bytes.vf".
+Unit <bytes> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 94
+ Flip-Flops                                            : 94
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <bytes> ...
+
+Optimizing unit <D3_8E_MXILINX_bytes> ...
+
+Optimizing unit <FD8CE_MXILINX_bytes_1> ...
+
+Optimizing unit <FD8CE_MXILINX_bytes_2> ...
+
+Optimizing unit <FD8CE_MXILINX_bytes_3> ...
+
+Optimizing unit <FD8CE_MXILINX_bytes_4> ...
+
+Optimizing unit <FD8CE_MXILINX_bytes_5> ...
+
+Optimizing unit <FD8CE_MXILINX_bytes_6> ...
+
+Optimizing unit <FD8CE_MXILINX_bytes_7> ...
+
+Optimizing unit <FD8CE_MXILINX_bytes_8> ...
+
+Optimizing unit <FD8CE_MXILINX_bytes_9> ...
+
+Optimizing unit <D2_4E_MXILINX_bytes> ...
+
+Optimizing unit <INV4_MXILINX_bytes> ...
+
+Optimizing unit <FD8CE_MXILINX_bytes_10> ...
+
+Optimizing unit <FTCE_MXILINX_bytes_1> ...
+
+Optimizing unit <FTCE_MXILINX_bytes_2> ...
+
+Optimizing unit <FTCE_MXILINX_bytes_3> ...
+
+Optimizing unit <FTCE_MXILINX_bytes_4> ...
+
+Optimizing unit <FTCE_MXILINX_bytes_5> ...
+
+Optimizing unit <FTCE_MXILINX_bytes_6> ...
+
+Optimizing unit <ADD8_MXILINX_bytes_1> ...
+
+Optimizing unit <ADD8_MXILINX_bytes_2> ...
+
+Optimizing unit <ADD8_MXILINX_bytes_3> ...
+
+Optimizing unit <ADD8_MXILINX_bytes_4> ...
+
+Optimizing unit <INV8_MXILINX_bytes> ...
+
+Optimizing unit <ADD8_MXILINX_bytes_5> ...
+
+Optimizing unit <ADD4_MXILINX_bytes> ...
+
+Optimizing unit <ADD8_MXILINX_bytes_6> ...
+
+Optimizing unit <CB2CE_MXILINX_bytes> ...
+
+Optimizing unit <CB4CE_MXILINX_bytes_1> ...
+
+Optimizing unit <CB4CE_MXILINX_bytes_2> ...
+
+Optimizing unit <sobelXY_MUSER_bytes> ...
+
+Optimizing unit <sobelSumABS_MUSER_bytes> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block bytes, actual ratio is 14.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 94
+ Flip-Flops                                            : 94
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : bytes.ngr
+Top Level Output File Name         : bytes
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 116
+
+Cell Usage :
+# BELS                             : 728
+#      AND2                        : 227
+#      AND3                        : 3
+#      AND3B1                      : 2
+#      AND3B2                      : 1
+#      AND4                        : 3
+#      AND4B1                      : 3
+#      AND4B2                      : 3
+#      AND4B3                      : 1
+#      BUF                         : 28
+#      GND                         : 14
+#      INV                         : 21
+#      MUXCY                       : 13
+#      MUXCY_D                     : 13
+#      MUXCY_L                     : 70
+#      OR2                         : 11
+#      OR3                         : 78
+#      VCC                         : 4
+#      XOR2                        : 137
+#      XORCY                       : 96
+# FlipFlops/Latches                : 94
+#      FDC                         : 2
+#      FDCE                        : 90
+#      FDCE_1                      : 1
+#      FDP_1                       : 1
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 115
+#      IBUF                        : 9
+#      OBUF                        : 106
+# Logical                          : 3
+#      NOR2                        : 3
+# Others                           : 96
+#      FMAP                        : 96
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s50pq208-5 
+
+ Number of Slices:                       47  out of    768     6%  
+ Number of Slice Flip Flops:             93  out of   1536     6%  
+ Number of 4 input LUTs:                 21  out of   1536     1%  
+ Number of IOs:                         116
+ Number of bonded IOBs:                 116  out of    124    93%  
+    IOB Flip Flops:                       1
+ Number of GCLKs:                         3  out of      8    37%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)         | Load  |
+-----------------------------------+-------------------------------+-------+
+DATAIN                             | BUFGP                         | 1     |
+CLK                                | IBUF+BUFG                     | 5     |
+XLXI_761/I_Q3/Q                    | NONE(XLXI_696)                | 1     |
+XLXI_543/I_Q1/Q                    | NONE(XLXI_742)                | 9     |
+XLXI_527/D01(XLXI_527/I_36_33:O)   | BUFG(*)(XLXI_10/I_Q0)         | 72    |
+XLXN_433(XLXI_522:O)               | NONE(*)(XLXI_540/I_Q0/I_36_35)| 2     |
+XLXI_527/D1(XLXI_527/I_36_32:O)    | NONE(*)(XLXI_761/I_Q0/I_36_35)| 4     |
+-----------------------------------+-------------------------------+-------+
+(*) These 3 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+----------------------------+-------+
+Control Signal                     | Buffer(FF name)            | Load  |
+-----------------------------------+----------------------------+-------+
+IN4_7_OBUF(XLXI_762/XLXI_734:G)    | NONE(XLXI_10/I_Q0)         | 82    |
+XLXI_541/O1(XLXI_541/I_36_39:O)    | NONE(XLXI_543/I_Q0/I_36_35)| 4     |
+XLXN_1328_OBUF(XLXI_758:O)         | NONE(XLXI_761/I_Q0/I_36_35)| 4     |
+XLXN_487_OBUF(XLXI_573:Q)          | NONE(XLXI_540/I_Q0/I_36_35)| 2     |
+XLXI_527/D2(XLXI_527/I_36_31:O)    | NONE(XLXI_426)             | 1     |
+-----------------------------------+----------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 6.027ns (Maximum Frequency: 165.931MHz)
+   Minimum input arrival time before clock: 1.846ns
+   Maximum output required time after clock: 14.059ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 6.027ns (frequency: 165.931MHz)
+  Total number of paths / destination ports: 11 / 5
+-------------------------------------------------------------------------
+Delay:               3.013ns (Levels of Logic = 2)
+  Source:            XLXI_543/I_Q1/I_36_35 (FF)
+  Destination:       XLXI_573 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK falling
+
+  Data Path: XLXI_543/I_Q1/I_36_35 to XLXI_573
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            16   0.626   1.051  I_36_35 (Q)
+     end scope: 'I_Q1'
+     end scope: 'XLXI_543'
+     OR3:I2->O             1   0.479   0.681  XLXI_759 (XLXN_1330)
+     FDP_1:D                   0.176          XLXI_573
+    ----------------------------------------
+    Total                      3.013ns (1.281ns logic, 1.732ns route)
+                                       (42.5% logic, 57.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXN_433'
+  Clock period: 2.882ns (frequency: 346.933MHz)
+  Total number of paths / destination ports: 3 / 2
+-------------------------------------------------------------------------
+Delay:               2.882ns (Levels of Logic = 1)
+  Source:            XLXI_540/I_Q0/I_36_35 (FF)
+  Destination:       XLXI_540/I_Q0/I_36_35 (FF)
+  Source Clock:      XLXN_433 rising
+  Destination Clock: XLXN_433 rising
+
+  Data Path: XLXI_540/I_Q0/I_36_35 to XLXI_540/I_Q0/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             8   0.626   0.921  I_36_35 (Q)
+     end scope: 'I_Q0'
+     begin scope: 'I_Q1'
+     XOR2:I0->O            1   0.479   0.681  I_36_32 (TQ)
+     FDCE:D                    0.176          I_36_35
+    ----------------------------------------
+    Total                      2.882ns (1.281ns logic, 1.601ns route)
+                                       (44.4% logic, 55.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_527/D1'
+  Clock period: 4.132ns (frequency: 242.043MHz)
+  Total number of paths / destination ports: 10 / 4
+-------------------------------------------------------------------------
+Delay:               4.132ns (Levels of Logic = 3)
+  Source:            XLXI_761/I_Q0/I_36_35 (FF)
+  Destination:       XLXI_761/I_Q2/I_36_35 (FF)
+  Source Clock:      XLXI_527/D1 falling
+  Destination Clock: XLXI_527/D1 falling
+
+  Data Path: XLXI_761/I_Q0/I_36_35 to XLXI_761/I_Q2/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            15   0.626   1.010  I_36_35 (Q)
+     end scope: 'I_Q0'
+     AND3:I2->O            1   0.479   0.681  I_36_32 (T3)
+     begin scope: 'I_Q3'
+     XOR2:I0->O            1   0.479   0.681  I_36_32 (TQ)
+     FDCE:D                    0.176          I_36_35
+    ----------------------------------------
+    Total                      4.132ns (1.760ns logic, 2.372ns route)
+                                       (42.6% logic, 57.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_527/D01'
+  Total number of paths / destination ports: 72 / 72
+-------------------------------------------------------------------------
+Offset:              1.846ns (Levels of Logic = 2)
+  Source:            DATA<0> (PAD)
+  Destination:       XLXI_10/I_Q0 (FF)
+  Destination Clock: XLXI_527/D01 falling
+
+  Data Path: DATA<0> to XLXI_10/I_Q0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             9   0.715   0.955  DATA_0_IBUF (DATA_0_IBUF)
+     begin scope: 'XLXI_10'
+     FDCE:D                    0.176          I_Q0
+    ----------------------------------------
+    Total                      1.846ns (0.891ns logic, 0.955ns route)
+                                       (48.3% logic, 51.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXN_433'
+  Total number of paths / destination ports: 7 / 4
+-------------------------------------------------------------------------
+Offset:              10.907ns (Levels of Logic = 7)
+  Source:            XLXI_540/I_Q0/I_36_35 (FF)
+  Destination:       D<10> (PAD)
+  Source Clock:      XLXN_433 rising
+
+  Data Path: XLXI_540/I_Q0/I_36_35 to D<10>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             8   0.626   0.921  I_36_35 (Q)
+     end scope: 'I_Q0'
+     end scope: 'XLXI_540'
+     begin scope: 'XLXI_527'
+     AND3B2:I0->O          1   0.479   0.681  I_36_33 (D01)
+     BUFG:I->O             1   0.357   0.681  D0_BUFG (D0)
+     end scope: 'XLXI_527'
+     begin scope: 'XLXI_541'
+     INV:I->O             73   0.479   1.775  I_36_37 (O3)
+     end scope: 'XLXI_541'
+     OBUF:I->O                 4.909          D_10_OBUF (D<10>)
+    ----------------------------------------
+    Total                     10.907ns (6.850ns logic, 4.057ns route)
+                                       (62.8% logic, 37.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              6.586ns (Levels of Logic = 2)
+  Source:            XLXI_543/I_Q1/I_36_35 (FF)
+  Destination:       D<11> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: XLXI_543/I_Q1/I_36_35 to D<11>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            16   0.626   1.051  I_36_35 (Q)
+     end scope: 'I_Q1'
+     end scope: 'XLXI_543'
+     OBUF:I->O                 4.909          D_11_OBUF (D<11>)
+    ----------------------------------------
+    Total                      6.586ns (5.535ns logic, 1.051ns route)
+                                       (84.0% logic, 16.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_527/D1'
+  Total number of paths / destination ports: 2193 / 79
+-------------------------------------------------------------------------
+Offset:              14.059ns (Levels of Logic = 8)
+  Source:            XLXI_761/I_Q3/I_36_35 (FF)
+  Destination:       IN0<6> (PAD)
+  Source Clock:      XLXI_527/D1 falling
+
+  Data Path: XLXI_761/I_Q3/I_36_35 to IN0<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            15   0.626   1.010  I_36_35 (Q)
+     end scope: 'I_Q3'
+     end scope: 'XLXI_761'
+     INV:I->O              8   0.479   0.921  XLXI_9 (XLXN_10)
+     begin scope: 'XLXI_8'
+     AND4B1:I3->O         11   0.479   0.972  I_36_31 (D6)
+     end scope: 'XLXI_8'
+     OR3:I2->O            73   0.479   1.775  XLXI_414 (XLXN_1251_OBUF)
+     AND2:I1->O            1   0.479   0.681  XLXI_770/XLXI_724/XLXI_3 (XLXI_770/XLXI_724/XLXN_3)
+     OR3:I0->O             3   0.479   0.771  XLXI_770/XLXI_724/XLXI_4 (IN8_0_OBUF)
+     OBUF:I->O                 4.909          IN8_0_OBUF (IN8<0>)
+    ----------------------------------------
+    Total                     14.059ns (7.930ns logic, 6.129ns route)
+                                       (56.4% logic, 43.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_761/I_Q3/Q'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              6.280ns (Levels of Logic = 1)
+  Source:            XLXI_696 (FF)
+  Destination:       x0 (PAD)
+  Source Clock:      XLXI_761/I_Q3/Q falling
+
+  Data Path: XLXI_696 to x0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE_1:C->Q           2   0.626   0.745  XLXI_696 (x0_OBUF)
+     OBUF:I->O                 4.909          x0_OBUF (x0)
+    ----------------------------------------
+    Total                      6.280ns (5.535ns logic, 0.745ns route)
+                                       (88.1% logic, 11.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_543/I_Q1/Q'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              6.216ns (Levels of Logic = 1)
+  Source:            XLXI_742 (FF)
+  Destination:       DATAOUT (PAD)
+  Source Clock:      XLXI_543/I_Q1/Q rising
+
+  Data Path: XLXI_742 to DATAOUT
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.626   0.681  XLXI_742 (DATAOUT_OBUF)
+     OBUF:I->O                 4.909          DATAOUT_OBUF (DATAOUT)
+    ----------------------------------------
+    Total                      6.216ns (5.535ns logic, 0.681ns route)
+                                       (89.0% logic, 11.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_527/D01'
+  Total number of paths / destination ports: 192 / 64
+-------------------------------------------------------------------------
+Offset:              8.716ns (Levels of Logic = 4)
+  Source:            XLXI_176/I_Q6 (FF)
+  Destination:       IN0<6> (PAD)
+  Source Clock:      XLXI_527/D01 falling
+
+  Data Path: XLXI_176/I_Q6 to IN0<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.626   0.771  I_Q6 (Q<6>)
+     end scope: 'XLXI_176'
+     AND2:I0->O            1   0.479   0.681  XLXI_768/XLXI_732/XLXI_1 (XLXI_768/XLXI_732/XLXN_1)
+     OR3:I2->O             3   0.479   0.771  XLXI_768/XLXI_732/XLXI_4 (IN6_6_OBUF)
+     OBUF:I->O                 4.909          IN6_6_OBUF (IN6<6>)
+    ----------------------------------------
+    Total                      8.716ns (6.493ns logic, 2.223ns route)
+                                       (74.5% logic, 25.5% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 5.72 secs
+ 
+--> 
+
+
+Total memory usage is 182692 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    9 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

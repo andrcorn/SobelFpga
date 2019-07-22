@@ -1,0 +1,45 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : shLf2.vf
+// /___/   /\     Timestamp : 06/02/2019 20:49:19
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family artix7 -verilog /home/andr/lnx/shLf2.vf -w /home/andr/test/shLf2.sch
+//Design Name: shLf2
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module shLf2(shIN, 
+             shOUT);
+
+    input [7:0] shIN;
+   output [7:0] shOUT;
+   
+   
+   BUF  XLXI_63 (.I(shIN[0]), 
+                .O(shOUT[1]));
+   BUF  XLXI_64 (.I(shIN[1]), 
+                .O(shOUT[2]));
+   BUF  XLXI_65 (.I(shIN[2]), 
+                .O(shOUT[3]));
+   BUF  XLXI_66 (.I(shIN[3]), 
+                .O(shOUT[4]));
+   BUF  XLXI_67 (.I(shIN[4]), 
+                .O(shOUT[5]));
+   BUF  XLXI_68 (.I(shIN[5]), 
+                .O(shOUT[6]));
+   BUF  XLXI_69 (.I(shIN[6]), 
+                .O(shOUT[7]));
+   GND  XLXI_71 (.G(shOUT[0]));
+endmodule

@@ -1,0 +1,7 @@
+verilog work "shLf2.vf"
+verilog work "sobelXY.vf"
+verilog work "sobelSumABS.vf"
+verilog work "mux1_3.vf"
+verilog work "sobel.vf"
+verilog work "muxs8_3.vf"
+verilog work "bytes.vf"

@@ -1,0 +1,135 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : muxs8_3.vf
+// /___/   /\     Timestamp : 06/02/2019 20:49:20
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family artix7 -verilog /home/andr/lnx/muxs8_3.vf -w /home/andr/test/muxs8_3.sch
+//Design Name: muxs8_3
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module mux1_3_MUSER_muxs8_3(E0, 
+                            E1, 
+                            E2, 
+                            I0, 
+                            I1, 
+                            I2, 
+                            O);
+
+    input E0;
+    input E1;
+    input E2;
+    input I0;
+    input I1;
+    input I2;
+   output O;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   
+   AND2  XLXI_1 (.I0(I0), 
+                .I1(E0), 
+                .O(XLXN_1));
+   AND2  XLXI_2 (.I0(I1), 
+                .I1(E1), 
+                .O(XLXN_2));
+   AND2  XLXI_3 (.I0(I2), 
+                .I1(E2), 
+                .O(XLXN_3));
+   OR3  XLXI_4 (.I0(XLXN_3), 
+               .I1(XLXN_2), 
+               .I2(XLXN_1), 
+               .O(O));
+endmodule
+`timescale 1ns / 1ps
+
+module muxs8_3(E0, 
+               E1, 
+               E2, 
+               I0, 
+               I1, 
+               I2, 
+               O, 
+               S);
+
+    input E0;
+    input E1;
+    input E2;
+    input [7:0] I0;
+    input [7:0] I1;
+    input [7:0] I2;
+   output [7:0] O;
+   output S;
+   
+   
+   mux1_3_MUSER_muxs8_3  XLXI_724 (.E0(E0), 
+                                  .E1(E1), 
+                                  .E2(E2), 
+                                  .I0(I0[0]), 
+                                  .I1(I1[0]), 
+                                  .I2(I2[0]), 
+                                  .O(O[0]));
+   mux1_3_MUSER_muxs8_3  XLXI_727 (.E0(E0), 
+                                  .E1(E1), 
+                                  .E2(E2), 
+                                  .I0(I0[1]), 
+                                  .I1(I1[1]), 
+                                  .I2(I2[1]), 
+                                  .O(O[1]));
+   mux1_3_MUSER_muxs8_3  XLXI_728 (.E0(E0), 
+                                  .E1(E1), 
+                                  .E2(E2), 
+                                  .I0(I0[2]), 
+                                  .I1(I1[2]), 
+                                  .I2(I2[2]), 
+                                  .O(O[2]));
+   mux1_3_MUSER_muxs8_3  XLXI_729 (.E0(E0), 
+                                  .E1(E1), 
+                                  .E2(E2), 
+                                  .I0(I0[3]), 
+                                  .I1(I1[3]), 
+                                  .I2(I2[3]), 
+                                  .O(O[3]));
+   mux1_3_MUSER_muxs8_3  XLXI_730 (.E0(E0), 
+                                  .E1(E1), 
+                                  .E2(E2), 
+                                  .I0(I0[4]), 
+                                  .I1(I1[4]), 
+                                  .I2(I2[4]), 
+                                  .O(O[4]));
+   mux1_3_MUSER_muxs8_3  XLXI_731 (.E0(E0), 
+                                  .E1(E1), 
+                                  .E2(E2), 
+                                  .I0(I0[5]), 
+                                  .I1(I1[5]), 
+                                  .I2(I2[5]), 
+                                  .O(O[5]));
+   mux1_3_MUSER_muxs8_3  XLXI_732 (.E0(E0), 
+                                  .E1(E1), 
+                                  .E2(E2), 
+                                  .I0(I0[6]), 
+                                  .I1(I1[6]), 
+                                  .I2(I2[6]), 
+                                  .O(O[6]));
+   mux1_3_MUSER_muxs8_3  XLXI_733 (.E0(E0), 
+                                  .E1(E1), 
+                                  .E2(E2), 
+                                  .I0(I0[7]), 
+                                  .I1(I1[7]), 
+                                  .I2(I2[7]), 
+                                  .O(S));
+   GND  XLXI_734 (.G(O[7]));
+endmodule

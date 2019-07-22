@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/andr/lnx/bytes_bytes_sch_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="bytes_bytes_sch_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="11" />
+   <wvobject fp_name="/bytes_bytes_sch_tb/DATARES" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">DATARES[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DATARES[7:0]</obj_property>
+      <obj_property name="label">TDB[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bytes_bytes_sch_tb/D[11]" type="logic" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">[11]</obj_property>
+      <obj_property name="ObjectShortName">D[11]</obj_property>
+      <obj_property name="label">x3/y3/TCL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bytes_bytes_sch_tb/x2" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">x2</obj_property>
+      <obj_property name="ObjectShortName">x2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bytes_bytes_sch_tb/D[12]" type="logic" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">[12]</obj_property>
+      <obj_property name="ObjectShortName">D[12]</obj_property>
+      <obj_property name="label">x1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bytes_bytes_sch_tb/x0" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">x0</obj_property>
+      <obj_property name="ObjectShortName">x0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bytes_bytes_sch_tb/y2" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">y2</obj_property>
+      <obj_property name="ObjectShortName">y2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bytes_bytes_sch_tb/y1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">y1</obj_property>
+      <obj_property name="ObjectShortName">y1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bytes_bytes_sch_tb/D[10]" type="logic" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">[10]</obj_property>
+      <obj_property name="ObjectShortName">D[10]</obj_property>
+      <obj_property name="label">y0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bytes_bytes_sch_tb/DATA" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">DATA[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DATA[7:0]</obj_property>
+      <obj_property name="label">RDB[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bytes_bytes_sch_tb/DATAIN" type="logic" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">DATAIN</obj_property>
+      <obj_property name="ObjectShortName">DATAIN</obj_property>
+      <obj_property name="label">RCL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bytes_bytes_sch_tb/CLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+</wave_config>

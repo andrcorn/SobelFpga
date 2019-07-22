@@ -1,0 +1,8 @@
+xst -intstyle ise -ifn "/home/andr/lnx/bytes.xst" -ofn "/home/andr/lnx/bytes.syr" 
+xst -intstyle ise -ifn "/home/andr/lnx/bytes.xst" -ofn "/home/andr/lnx/bytes.syr" 
+xst -intstyle ise -ifn "/home/andr/lnx/bytes.xst" -ofn "/home/andr/lnx/bytes.syr" 
+xst -intstyle ise -ifn "/home/andr/lnx/bytes.xst" -ofn "/home/andr/lnx/bytes.syr" 
+xst -intstyle ise -ifn "/home/andr/lnx/bytes.xst" -ofn "/home/andr/lnx/bytes.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50-pq208-5 bytes.ngc bytes.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o bytes_map.ncd bytes.ngd bytes.pcf 
+xst -intstyle ise -ifn "/home/andr/lnx/bytes.xst" -ofn "/home/andr/lnx/bytes.syr" 
